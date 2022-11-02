@@ -1,0 +1,42 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+.table{
+    background-color: $white;
+    padding: 1.5rem;
+    // width: 70%;
+    tr{
+        #add{
+            .btn[aria-checked="false"]{
+                display: none
+            }
+            .cover{
+                @include flex;
+                display: none;
+                
+                .mark{
+                    color: #4caf50;
+                    border-radius: 50%;
+                    background-color: #c1e6c2;
+                    border-radius: 50%;
+                    width: 15%;
+                    padding: 0.3rem;
+                      
+                }
+            }
+            .cover[aria-checked="true"]{
+                display: block;
+            }
+        }
+    }
+    th[scope="row"]{
+        @include flex;
+        width: fit-content;
+        gap: 5px;
+        
+    }
+    a{
+        @include center;
+        font-size: 1.2rem;
+    }
+}

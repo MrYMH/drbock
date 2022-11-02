@@ -1,0 +1,54 @@
+
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex4 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+@mixin flex2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+@mixin flex1 {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+@mixin flex3 {
+    display: flex;
+    align-content: space-between;
+    gap: 0;
+    flex-direction: column;
+}
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+@mixin icon($color) {
+    background-color: $color;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir=rtl] & {
+      #{$property}: $rtl-value;
+    }
+  }

@@ -1,0 +1,28 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+.header{
+    grid-area: header;
+    background-color: $white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 1rem;
+    width: 99%;
+    .container-fluid{
+
+        @include flex;
+        
+        .search{
+            @include flex2;
+            background-color: #e3e3e3;
+            width: 50%;
+            padding:0rem  1rem;
+            border-radius: 1rem;
+        }
+        .me{
+            @include flex;
+            width: 7%;
+            padding:0rem  1rem;
+        }
+    }
+}

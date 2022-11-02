@@ -1,0 +1,41 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+.main{
+    .container{
+        .head{
+            @include flex;
+            .total{
+                .icon{
+                    @include icon($red);
+                }
+            }
+            .cost{
+                .icon{
+                    @include icon($green);
+                }
+            }
+            .staf{
+                .icon{
+                    @include icon($main-blue);
+                }
+            }
+            .Appointment{
+                .icon{
+                    @include icon($orange);
+                }
+            }
+            
+            div{
+                @include flex;
+                gap: 1rem;
+                
+                
+                .text{
+                    font-size: 0.9rem;
+                    @include flex3;
+                }
+            }
+        }
+    }
+}

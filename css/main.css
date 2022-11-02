@@ -1,0 +1,261 @@
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  width: 99%;
+}
+.header .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container-fluid .search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e3e3e3;
+  width: 50%;
+  padding: 0rem 1rem;
+  border-radius: 1rem;
+}
+.header .container-fluid .me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7%;
+  padding: 0rem 1rem;
+}
+
+body {
+  background-color: #ebf2ff;
+}
+
+.mypage {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "gap header header header header header header header side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side" "gap main main main main main main main side side";
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.gap {
+  grid-area: gap;
+  background-color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  height: 100%;
+  margin: 0 0.6rem;
+  border-radius: 5px;
+}
+.gap .container {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.gap .container div {
+  background-color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 1, 0.2);
+}
+.gap .container div i {
+  font-size: 2rem;
+}
+.gap .container div[aria-checked=true] {
+  border: 2px solid #666666;
+  background-color: #0075ff;
+}
+
+.main .container .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .container .head .total .icon {
+  background-color: #f76262;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.main .container .head .cost .icon {
+  background-color: #12d226;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.main .container .head .staf .icon {
+  background-color: #0075ff;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.main .container .head .Appointment .icon {
+  background-color: #ff7a00;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.main .container .head div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.main .container .head div .text {
+  font-size: 0.9rem;
+  display: flex;
+  align-content: space-between;
+  gap: 0;
+  flex-direction: column;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+.table tr #add .btn[aria-checked=false] {
+  display: none;
+}
+.table tr #add .cover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+.table tr #add .cover .mark {
+  color: #4caf50;
+  border-radius: 50%;
+  background-color: #c1e6c2;
+  border-radius: 50%;
+  width: 15%;
+  padding: 0.3rem;
+}
+.table tr #add .cover[aria-checked=true] {
+  display: block;
+}
+.table th[scope=row] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 5px;
+}
+.table a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.sidebar {
+  background-color: #ffffff;
+}
+.sidebar .navbar {
+  width: 100% !important;
+  margin: 0;
+  margin-bottom: 0.7rem;
+  background-color: #ffffff !important;
+}
+.sidebar .navbar .nn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profilepic {
+  border-radius: 50%;
+}
+
+.my-profile .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-profile .data .part1-name {
+  font-weight: bold;
+}
+.my-profile .data .part1-sp {
+  opacity: 0.9;
+}
+.my-profile .quickinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-profile .quickinfo .infobox {
+  margin: 0.4rem;
+  width: 30%;
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  background-color: #0075ff;
+  border-radius: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.my-profile .about h5 {
+  color: #0075ff;
+}
+.my-profile .post .posthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0075ff;
+}
+.my-profile .post .posthead a {
+  text-decoration: none;
+}
+.my-profile .post .posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.my-profile .post .posts .post-box {
+  background-color: #ebf2ff;
+  width: 30%;
+  padding-top: 0.7rem;
+  font-size: 0.5rem;
+}
+.my-profile .post .posts .post-box h6 {
+  font-size: 0.5rem;
+}
+.my-profile .post .posts .post-box .maininfo {
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.my-profile .post .posts .post-box .body p {
+  padding: 0 0.4rem;
+}
+.my-profile .post .posts .post-box .img {
+  width: 100%;
+}
+.my-profile .addbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}/*# sourceMappingURL=main.css.map */

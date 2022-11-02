@@ -1,0 +1,6 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+.charts{
+    @include flex;
+}

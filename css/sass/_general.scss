@@ -1,0 +1,34 @@
+
+@use './color' as *;
+body{
+    background-color:$bg-color ;
+}
+
+
+
+
+// grid 
+.mypage{
+    display: grid;
+    grid-template-columns:auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    //header gap main side
+    "gap header header header header header header header side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    "gap main main main main main main main side side"
+    ;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: side;
+}

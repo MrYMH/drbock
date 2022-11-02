@@ -1,0 +1,52 @@
+.pie-chart {
+	background:
+		radial-gradient(
+			circle closest-side,
+			white 0,
+			white 25.9%,
+			transparent 25.9%,
+			transparent 35%,
+			white 0
+		),
+		conic-gradient(
+			#517ba9 0,
+			#517ba9 52%,
+			#f28e2c 0,
+			#f28e2c 80%,
+			#cda2dd 0,
+			#cda2dd 100%
+	);
+	position: relative;
+	width: 15rem;
+	min-height: 10rem;
+	margin: 1rem;
+	outline: 1px solid #ccc;
+}
+.pie-chart h6 {
+	position: absolute;
+	margin: 1rem;
+}
+.pie-chart cite {
+	position: absolute;
+	bottom: 0;
+	font-size: 80%;
+	padding: 1rem;
+	color: gray;
+}
+.pie-chart figcaption {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	font-size: smaller;
+	text-align: right;
+}
+.pie-chart span:after {
+	display: inline-block;
+	content: "";
+	width: 0.8em;
+	height: 0.8em;
+	margin-left: 0.4em;
+	height: 0.8em;
+	border-radius: 0.2em;
+	background: currentColor;
+}

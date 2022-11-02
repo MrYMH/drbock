@@ -1,0 +1,101 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+
+.sidebar{
+    background-color: $white;
+    .navbar{
+        width: 100% !important;
+        margin: 0;
+        margin-bottom: 0.7rem;
+        background-color: $white !important;
+        .nn{
+            width: 100%;
+            @include flex;
+        }
+    }
+}
+
+.profilepic{
+    border-radius: 50%;
+}
+.my-profile{
+    
+    .data{
+        @include flex;
+        
+        .part1{
+            
+            &-name{
+
+                font-weight: bold;
+            }
+            &-sp{
+                opacity: 0.9;
+            }
+        }
+    }
+    .quickinfo{
+        @include flex;
+        
+        .infobox{
+            margin: 0.4rem;
+            width: 30%;
+            padding: 0.4rem;
+            font-size: 0.6rem;
+            background-color: $main-blue;
+            border-radius: 1rem;
+            height: fit-content;
+            
+        }
+
+    }
+    .about{
+        h5{
+            color: $main-blue;
+        }
+    }
+    .post{
+        .posthead{
+            @include flex;
+            color: $main-blue;
+            a{
+                text-decoration: none
+            }
+
+        }
+        .posts{
+            @include flex;
+            flex-wrap: wrap;
+            .post-box{
+                background-color: $bg-color;
+                width: 30%;
+                padding-top: 0.7rem;
+                font-size: 0.5rem;
+                h6{
+                    font-size: 0.5rem;
+
+                }
+                .maininfo{
+                    padding:0.2rem 0.5rem;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    
+                }
+                .body{
+                    p{
+                        padding:0 0.4rem;
+                    }
+                }
+                .img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .addbtn{
+        @include center;
+        margin: 1rem;
+    }
+}
