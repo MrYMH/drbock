@@ -1,0 +1,45 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+.addpost{
+    display: none;
+    h6{
+        color: $main-blue;
+        margin: 0 1rem;
+        font-size: 1.1rem;
+    }
+    .title{
+        padding: 1.3rem;
+        margin: 0;
+        input{
+            padding: 1.3rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            height: 3rem;
+            
+        }
+        
+
+    }
+    .addpic{
+        border: 1px solid black;
+        margin: 0.7rem;
+        
+        @include center;
+        padding: 0.7rem ;
+        border-radius: 2rem;
+        i{
+            margin: 0;
+
+        }
+        p{
+            margin: 0;
+        }
+
+    }
+    #btn{
+        @include center;
+        margin: 1rem auto;
+
+    }
+}

@@ -34,7 +34,12 @@
         <!-- end header -->
         <!-- gap -->
         <div class="gap">
-            <div class="container">
+            <div class="mob">
+                <div class="mobmenu" ><i id="mobmenu" class="fa-solid fa-bars"></i></div>
+                <div><i  id="mobprofile" class="fa-solid fa-house"></i></div>
+                <div ><i id="mobmsg" class="fa-solid fa-message"></i></div>
+            </div>
+            <div class="container" id="gap">
                 <div class="user btn" id="gap" aria-checked="true"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="videos btn" id="gap" aria-checked="flase">
                     <i class="fa-solid fa-video"></i>
@@ -214,7 +219,7 @@
         3-doctor details
         4-add post
         -->
-        <div class="sidebar">
+        <div class="sidebar" id="side">
             <div class="container">
                 <nav class="navbar navbar-expand-lg bg-light">
                     <div class="container-fluid">
@@ -222,10 +227,10 @@
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 nn">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#profile">My Profile</a>
+                            <a class="nav-link active" id="profbtn"   href="#profile">My Profile</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#msg">Messages</a>
+                            <a class="nav-link" id="msgbtn" aria-current="page" href="#msg">Messages</a>
                           </li>
 
                         </ul>
@@ -234,7 +239,8 @@
                     </div>
                   </nav>
                 <!-- 1 - my profile -->
-                <div class="my-profile" id="profile">
+                
+                <div class="my-profile" id="profile" aria-selected="true">
                     <h5 class="name">Dr Fatma Ahmed</h5>
                     <img class="profilepic" src="photo/indian-female.webp" width="100px" height="100px" alt="">
                     <div class="data">
@@ -325,8 +331,97 @@
                         </div>
                     </div>
                     <div class="addbtn">
-                        <button type="button" class="btn btn-primary">Add post</button>
+                        <button type="button" id="addPostBtn" class="btn btn-primary">Add post</button>
                     </div>
+                </div>
+                <!-- 2 = msgs -->
+                
+                <div class="msgs" id="msg" aria-selected="false">
+                    <div class="msgbox">
+                        <div class="imgbox">
+                            <img src="photo/doctor-icon.svg" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="name-postBox">
+                            <h6 class="name">Dr. Ahmed Youssef</h6>
+                            <p class="post">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <p class="postdate">
+                            Mon.12.00
+                        </p>
+                    </div>
+                    <div class="msgbox">
+                        <div class="imgbox">
+                            <img src="photo/doctor-icon.svg" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="name-postBox">
+                            <h6 class="name">Dr. Ahmed Youssef</h6>
+                            <p class="post">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <p class="postdate">
+                            Mon.12.00
+                        </p>
+                    </div>
+                    <div class="msgbox">
+                        <div class="imgbox">
+                            <img src="photo/doctor-icon.svg" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="name-postBox">
+                            <h6 class="name">Dr. Ahmed Youssef</h6>
+                            <p class="post">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <p class="postdate">
+                            Mon.12.00
+                        </p>
+                    </div>
+                    <div class="msgbox">
+                        <div class="imgbox">
+                            <img src="photo/doctor-icon.svg" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="name-postBox">
+                            <h6 class="name">Dr. Ahmed Youssef</h6>
+                            <p class="post">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <p class="postdate">
+                            Mon.12.00
+                        </p>
+                    </div>
+                    <div class="msgbox">
+                        <div class="imgbox">
+                            <img src="photo/doctor-icon.svg" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="name-postBox">
+                            <h6 class="name">Dr. Ahmed Youssef</h6>
+                            <p class="post">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <p class="postdate">
+                            Mon.12.00
+                        </p>
+                    </div>
+                    
+                </div>
+                <!-- 3 = add post -->
+                <div class="addpost" id="addpost" aria-selected="false">
+                    <h6>Add post</h6>
+                    <form action="#">
+                        <div class="title">
+                            <input type="text" placeholder="Write a title">
+                        </div>
+                        <div class="addpic">
+                            <i class="fa-regular fa-image"></i>
+                            <p>Add Picture</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id = 'btn' name="Post">Post</button>
+                    </form>
                 </div>
             </div>
         </div>

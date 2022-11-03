@@ -1,0 +1,57 @@
+@use '../color' as *;
+@use '../mixins' as *;
+
+#mobmsg{
+    display: none;
+}
+.msgs{
+    display: none;
+    .msgbox{
+        @include flex;
+        gap: 0.7rem;
+        .imgbox{
+            background-color: #cfd4d7;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        .name-postBox{
+            line-height: 1rem;
+            .name{
+                margin-bottom: 0;
+            }
+            .post{
+                font-size:0.7rem ;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #mobmsg ,#mobprofile{
+        display: block;
+    }
+    .msgs{
+        display: none;
+        z-index: 999999999;
+        .msgbox{
+            @include flex;
+            gap: 0.7rem;
+            .imgbox{
+                background-color: #cfd4d7;
+                padding: 0.5rem;
+                border-radius: 50%;
+            }
+            .name-postBox{
+                line-height: 1rem;
+                .name{
+                    margin-bottom: 0;
+                }
+                .post{
+                    font-size:0.7rem ;
+                }
+            }
+    
+        }
+    }
+}

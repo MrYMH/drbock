@@ -4,3 +4,16 @@
 .charts{
     @include flex;
 }
+
+@media only screen and (max-width: 480px) {
+    .charts{
+        .pie{
+            figure{
+                width: 100vw;
+            }
+        }
+
+        display: block;
+        gap: 0.7rem;
+    }
+}

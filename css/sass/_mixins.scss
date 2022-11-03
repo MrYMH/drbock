@@ -5,6 +5,12 @@
     justify-content: space-between;
     align-items: center;
 }
+@mixin flex5 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+}
 @mixin flex4 {
     display: flex;
     justify-content: space-between;

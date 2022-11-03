@@ -18,10 +18,8 @@
                     color: #4caf50;
                     border-radius: 50%;
                     background-color: #c1e6c2;
-                    border-radius: 50%;
                     width: 15%;
                     padding: 0.3rem;
-                      
                 }
             }
             .cover[aria-checked="true"]{
@@ -38,5 +36,47 @@
     a{
         @include center;
         font-size: 1.2rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .table{
+        padding: 0.7rem;
+        font-size: 0.7rem;
+        width: 90%;
+        h4{
+            width: 90%;
+            font-size: 0.8rem;
+        }
+        tr{
+            #add{
+                #tablebtn{
+                    font-size: 0.5rem !important;
+                }
+                .cover{
+                    .mark{
+                        width: 15%;
+                        padding: 0.3rem;
+                          
+                    }
+                }
+                
+            }
+        }
+        th[scope="row"]{
+            @include flex;
+            width: fit-content;
+            gap: 3px;
+            p{
+                font-size: 0.2rem
+            }
+            
+        }
+        a{
+            @include center;
+            font-size: 0.7rem;
+            width: 100%;
+        }
     }
 }

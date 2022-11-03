@@ -39,3 +39,31 @@
         }
     }
 }
+
+//mobile
+
+@media only screen and (max-width: 480px) {
+    .main{
+        .container{
+            .head{
+                @include flex;
+                flex-wrap: wrap;
+                margin: 0.6rem;
+                .icon{
+                    @include center;
+                    
+                }
+                div{
+                    width: 20%;
+                    
+                    
+                    
+                    .text{
+                        font-size: 0.4rem;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

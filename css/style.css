@@ -50,3 +50,25 @@
 	border-radius: 0.2em;
 	background: currentColor;
 }
+
+@media only screen and (max-width: 480px) {
+    .pie-chart {
+		
+		
+		width: 10rem;
+		min-height: 5rem;
+		
+	}
+	.pie-chart h6 {
+		margin: 0.3rem;
+	}
+	.pie-chart cite {
+		
+		bottom: -12px;
+	}
+	.pie-chart figcaption {
+		bottom: 1.5em;
+		
+	}
+	
+}

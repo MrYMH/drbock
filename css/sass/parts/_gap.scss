@@ -2,6 +2,9 @@
 @use '../color' as *;
 
 .gap{
+    .mobmenu{
+        display: none;
+    }
     grid-area: gap;
     background-color: $white;
     width: fit-content;
@@ -26,5 +29,24 @@
             background-color: $main-blue;
             
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gap{
+        width: 90vw;
+        .mob{
+            @include flex;
+        }
+        .mobmenu{
+            display: block;
+        }
+        .container{
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            z-index: 9999999999999999999999999999;
+        }
+        
     }
 }

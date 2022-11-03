@@ -1,7 +1,9 @@
 @use '../color' as *;
 @use '../mixins' as *;
 
-
+#mobprofile{
+    display: none;
+}
 .sidebar{
     background-color: $white;
     .navbar{
