@@ -43,10 +43,13 @@
 @media only screen and (max-width: 480px) {
     .table{
         padding: 0.7rem;
-        font-size: 0.7rem;
-        width: 90%;
+        font-size: 0.5rem;
+        width: 90vw;
+        th{
+            font-size: 0.4rem;
+        }
         h4{
-            width: 90%;
+            width: 100vw;
             font-size: 0.8rem;
         }
         tr{
@@ -67,9 +70,9 @@
         th[scope="row"]{
             @include flex;
             width: fit-content;
-            gap: 3px;
+            gap: 2px;
             p{
-                font-size: 0.2rem
+                font-size: 0.4rem
             }
             
         }

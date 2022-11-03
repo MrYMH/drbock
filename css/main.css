@@ -233,11 +233,14 @@ body {
 @media only screen and (max-width: 480px) {
   .table {
     padding: 0.7rem;
-    font-size: 0.7rem;
-    width: 90%;
+    font-size: 0.5rem;
+    width: 90vw;
+  }
+  .table th {
+    font-size: 0.4rem;
   }
   .table h4 {
-    width: 90%;
+    width: 100vw;
     font-size: 0.8rem;
   }
   .table tr #add #tablebtn {
@@ -254,10 +257,10 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    gap: 3px;
+    gap: 2px;
   }
   .table th[scope=row] p {
-    font-size: 0.2rem;
+    font-size: 0.4rem;
   }
   .table a {
     display: flex;
