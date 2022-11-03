@@ -43,11 +43,9 @@ for (let i = 0; i < 6; i++) {
 
 
 //const
-const mobprofile = document.getElementById('mobprofile');
-const mobmsg = document.getElementById('mob');
+
 
 //side
-const side = document.getElementById('side');
 
 // #profile
 const prof = document.getElementById('profile');
@@ -95,33 +93,66 @@ profbtn.addEventListener('click' , (e) => {
 
 
 
-// mobprofile.addEventListener('click' , (e) => {
-//     if(side.style.display === 'block'){
-//         convertMsgToProf(e)
-//     }else{
-//         if (side.style.display === 'none') {
-//             side.style.display = 'block';
-//         }
-//     }
+
+
+//mobile [masg <=>  profile]
+const mobprofile = document.getElementById('mobprofile');
+const mobmsg = document.getElementById('mobmsg');
+const sidebdev = document.getElementById('side');
+const mainPage = document.getElementById('mainPage');
+
+/* 
+msg.onclick:
+    [1] side = 'block'
+    [2]profile => remove attribute aria-selected
+    [3]msg => set attribute aria-selected
+*/
+
+mobmsg.addEventListener('click' , (e) => {
+    if (side.style.display === 'block' && msg.hasAttribute('aria-selected')) {
+        side.style.display = 'none';
+        mainPage.style.display = 'block';
+    } else {
+        if (side.style.display === 'block') {
+            prof.setAttribute('aria-selected' , 'false');
+            msg.setAttribute('aria-selected' , 'true');
+        }else{
+            mainPage.style.display = 'none';
+            side.style.display = 'block';
+            prof.setAttribute('aria-selected' , 'false');
+            msg.setAttribute('aria-selected' , 'true');
+        }
+
+    }
     
-// })
 
+})
 
-// mobmsg.addEventListener('click' , (e) => {
-//     if(side.style.display === 'none'){
-//         side.style.display = 'block';
-//         convertProfToMsg(e)
-//     }else{
-//         if (side.style.display === 'block') {
-//             convertProfToMsg(e)
-//         }
-//     }
+// profile.onclick:
+//     [1] side = 'block'
+//     [2]msg => remove attribute aria-selected
+//     [3]profile => set attribute aria-selected
+// */
+
+mobprofile.addEventListener('click' , (e) => {
+    if (side.style.display === 'block' && prof.hasAttribute('aria-selected')) {
+        side.style.display = 'none';
+        mainPage.style.display = 'block';
+    } else {
+        if (side.style.display === 'block') {
+            msg.setAttribute('aria-selected' , 'false');
+            prof.setAttribute('aria-selected' , 'true');
+        }else{
+            mainPage.style.display = 'none';
+            side.style.display = 'block';
+            msg.setAttribute('aria-selected' , 'false');
+            prof.setAttribute('aria-selected' , 'true');
+        }
+
+    }
     
-// })
 
-
-
-
+})
 
 
 
@@ -146,16 +177,16 @@ profbtn.addEventListener('click' , (e) => {
 
 
 //menu
-const gap = document.getElementById('gap');
+const gap = document.getElementById('gapcon');
 const menu = document.getElementById('mobmenu');
 
-menu.addEventListener('click' ,(e) => {
+menu.addEventListener('click' ,(el) => {
     if (gap.style.display === 'none') {
         gap.style.display = 'flex';
     }else{
-        if (gap.style.display === 'flex') {
+        // if (gap.style.display === 'flex') {
             gap.style.display = 'none';
-        }
+        // }
     }
     
     

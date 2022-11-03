@@ -35,11 +35,11 @@
         <!-- gap -->
         <div class="gap">
             <div class="mob">
-                <div class="mobmenu" ><i id="mobmenu" class="fa-solid fa-bars"></i></div>
-                <div><i  id="mobprofile" class="fa-solid fa-house"></i></div>
-                <div ><i id="mobmsg" class="fa-solid fa-message"></i></div>
+                <div class="mobmenu" id="mobmenu" ><i  class="fa-solid fa-bars"></i></div>
+                <div id="mobprofile"><i   class="fa-solid fa-house"></i></div>
+                <div id="mobmsg"><i  class="fa-solid fa-message"></i></div>
             </div>
-            <div class="container" id="gap">
+            <div class="container" id="gapcon">
                 <div class="user btn" id="gap" aria-checked="true"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="videos btn" id="gap" aria-checked="flase">
                     <i class="fa-solid fa-video"></i>
@@ -60,7 +60,7 @@
         </div>
         <!-- end gap -->
         <!-- start main page -->
-        <div class="main">
+        <div class="main" id="mainPage">
             <div class="container">
                 <!-- start head -->
                 <div class="head ">
@@ -227,10 +227,10 @@
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 nn">
                           <li class="nav-item">
-                            <a class="nav-link active" id="profbtn"   href="#profile">My Profile</a>
+                            <a class="nav-link active" id="profbtn" aria-current="page"   href="#profile">My Profile</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="msgbtn" aria-current="page" href="#msg">Messages</a>
+                            <a class="nav-link" id="msgbtn"  href="#msg">Messages</a>
                           </li>
 
                         </ul>
