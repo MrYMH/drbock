@@ -44,7 +44,7 @@ for (let i = 0; i < 6; i++) {
 
 //const
 const mobprofile = document.getElementById('mobprofile');
-const mobmsg = document.getElementById('mobmsg');
+const mobmsg = document.getElementById('mob');
 
 //side
 const side = document.getElementById('side');
@@ -56,6 +56,14 @@ const msg = document.getElementById('msg');
 // #addpost
 const addpost = document.getElementById('addpost');
 
+
+
+//convert to msg page
+const profbtn = document.getElementById('profbtn');
+const msgbtn = document.getElementById('msgbtn');
+
+
+
 //convert to add post
 const addBtn = document.getElementById('addPostBtn');
 
@@ -66,56 +74,50 @@ addBtn.addEventListener('click' , (e) => {
 })
 
 //convert to msg page
-const profbtn = document.getElementById('profbtn');
-const msgbtn = document.getElementById('msgbtn');
-function convertProfToMsg(e) {
-    
+
+msgbtn.addEventListener('click' , (e) => {
         profbtn.removeAttribute('aria-current');
         msgbtn.setAttribute('aria-current' , 'page')
         prof.setAttribute('aria-selected' , 'false');
         msg.setAttribute('aria-selected' , 'true');
     
-}
-function convertMsgToProf(e) {
+} )
+
+
+//convert to prof page
+profbtn.addEventListener('click' , (e) => {
     msgbtn.removeAttribute('aria-current');
     profbtn.setAttribute('aria-current' , 'page')
     msg.setAttribute('aria-selected' , 'false');
     prof.setAttribute('aria-selected' , 'true');
-}
 
-
-
-msgbtn.addEventListener('click' , convertProfToMsg(e) )
-
-
-
-profbtn.addEventListener('click' , convertMsgToProf(e))
-
-
-
-mobprofile.addEventListener('click' , (e) => {
-    if(side.style.display === 'block'){
-        convertMsgToProf(e)
-    }else{
-        if (side.style.display === 'none') {
-            side.style.display = 'block';
-        }
-    }
-    
 })
 
 
-mobmsg.addEventListener('click' , (e) => {
-    if(side.style.display === 'none'){
-        side.style.display = 'block';
-        convertProfToMsg(e)
-    }else{
-        if (side.style.display === 'block') {
-            convertProfToMsg(e)
-        }
-    }
+
+// mobprofile.addEventListener('click' , (e) => {
+//     if(side.style.display === 'block'){
+//         convertMsgToProf(e)
+//     }else{
+//         if (side.style.display === 'none') {
+//             side.style.display = 'block';
+//         }
+//     }
     
-})
+// })
+
+
+// mobmsg.addEventListener('click' , (e) => {
+//     if(side.style.display === 'none'){
+//         side.style.display = 'block';
+//         convertProfToMsg(e)
+//     }else{
+//         if (side.style.display === 'block') {
+//             convertProfToMsg(e)
+//         }
+//     }
+    
+// })
 
 
 

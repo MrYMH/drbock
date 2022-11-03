@@ -290,6 +290,9 @@ body {
   border-radius: 50%;
 }
 
+.my-profile {
+  display: none;
+}
 .my-profile .data {
   display: flex;
   justify-content: space-between;
